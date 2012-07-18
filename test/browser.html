@@ -1,0 +1,29 @@
+<!doctype>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>JS module example</title>
+    <script type="text/javascript" src="../node_modules/requirejs/require.js"></script>
+  </head>
+  <body>
+    
+    <h1>JS module example</h1>
+    
+    <p id="result1"></p>
+    <p id="result2"></p>
+    
+    <script type="text/javascript">
+      require(['../lib/jsmod/polynomial'], function(jsmod) {
+        var result = jsmod.polynomial(1, -2, 3, 8);
+        document.getElementById('result1').innerHTML = result;
+      });
+      
+      require(['../lib/jsmod'], function(jsmod) {
+        var result = jsmod.square(7);
+        document.getElementById('result2').innerHTML = result;
+      });
+    </script>
+    
+  </body>
+</html>
+

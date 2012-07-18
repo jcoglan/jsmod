@@ -1,0 +1,32 @@
+<!doctype>
+
+<!--  Before loading this file, you need to run:
+      
+      npm install
+      ./node_modules/.bin/r.js -o name=lib/jsmod/polynomial out=build/app-require.js
+-->
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>JS module example</title>
+    <script type="text/javascript" src="../build/app-require.js"></script>
+  </head>
+  <body>
+    
+    <h1>JS module example</h1>
+    
+    <p id="result1"></p>
+    <p id="result2"></p>
+    
+    <script type="text/javascript">
+      var result = Jsmod.polynomial(1, -2, 3, 8);
+      document.getElementById('result1').innerHTML = result;
+      
+      var result = Jsmod.square(7);
+      document.getElementById('result2').innerHTML = result;
+    </script>
+    
+  </body>
+</html>
+
