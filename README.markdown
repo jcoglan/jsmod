@@ -20,6 +20,7 @@ The following should all output `51`:
     rhino test/console.js
     narwhal test/console.js
     ringo test/console.js
+    cscript.exe test/console.js
 
 This page should print `51` and `49`:
 
